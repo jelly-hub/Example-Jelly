@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   root 'welcome#landing'
 
   # route to login page
-  get '/user_login' => 'user#login'
+  get '/user/login' => 'users#login'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

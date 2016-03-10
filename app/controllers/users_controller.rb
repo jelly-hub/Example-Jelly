@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
+  # With this the link to the login page works.
+  # It has to be reworked tho, as it may produce a security risk.
+  skip_before_filter :verify_authenticity_token, except: [:login]
+
   # GET /users
   # GET /users.json
   def index
@@ -61,8 +65,9 @@ class UsersController < ApplicationController
     end
   end
 
+  # LOGIN /user/login
+  # Load Login page
   def login
-    render js: "alert('it works');"
   end
 
 
