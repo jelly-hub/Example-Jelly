@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  # With this the link to the login page works.
-  # It has to be reworked tho, as it may produce a security risk.
+  # With this the link to the login page works. Without, an CSRF Error occured.
+  # It has to be reworked tho, as it may produce a security risk and there is probably a better solution.
   skip_before_filter :verify_authenticity_token, except: [:login]
 
   # GET /users
@@ -64,12 +64,6 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  # LOGIN /user/login
-  # Load Login page
-  def login
-  end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

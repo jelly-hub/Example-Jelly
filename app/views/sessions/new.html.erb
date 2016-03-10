@@ -1,0 +1,18 @@
+<% @title="Log In" %>
+<body id="login_Body">
+	<div id="login_Headline">
+		<h2>Benutzer authentifizierung</h2>
+		<h3>hint: sebastianmandt.dev@gmail.com - jellyadmin</h3>
+	</div>
+	<div id="login_Form">
+		<%= form_for(:session, url: login_path) do |f| %>
+			<p><%= f.label :email %></p>
+			<%= f.email_field :email, class: 'form-control' %>
+
+			<p><%= f.label :password %></p>
+			<%= f.password_field :password, class: 'form-control' %>
+		
+			<%= f.submit "Log In Now!", class: "btn btn-primary" %>
+		<% end %>
+	</div>
+
