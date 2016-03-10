@@ -1,5 +1,8 @@
 <% @title="Log In" %>
 <body id="login_Body">
+	<% flash.each do |message_type, message| %>
+		<div class="alert alert-<%= message_type %>"><%= message %></div>
+	<% end %>
 	<div id="login_Headline">
 		<h2>Benutzer authentifizierung</h2>
 		<h3>hint: sebastianmandt.dev@gmail.com - jellyadmin</h3>

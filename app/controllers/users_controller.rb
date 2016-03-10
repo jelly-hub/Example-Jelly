@@ -27,6 +27,9 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.json
+  #IMPORTANT SIDENOTE:
+  # => create users with >> password_digest: BCrypt::Password.create("...")  <<
+  # => ganz wichtig ... ansonsten suchst du den Fehler wieder ewig Ò.ó
   def create
     @user = User.new(user_params)
 
