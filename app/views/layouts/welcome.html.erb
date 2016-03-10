@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ExampleJelly</title>
+  <title>ExampleJelly: Welcome</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<header>
-		<div id="app_header" class="stayOnTop">
-			
-		</div>
-	</header>
-
+<body id="welcome_Body">
 <%= yield %>
-
-	<footer>
-	</footer>
+<footer id="welcome_Footer">
+</footer>
 </body>
 </html>

@@ -1,0 +1,43 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 	
+	This File includes all CSS of the landing page.
+*/
+
+
+/* body of welcome page */
+#welcome_Body{
+	background-color: #002140;	
+}
+
+/* Headline CSS */
+#welcome_Headline{
+	text-align: center;
+	margin-top: 100px;
+} 
+
+#welcome_Headline h1, h2{
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 5em;
+	color: #fff;
+}
+
+#welcome_Headline h2{
+	font-size: 2em;
+}
+
+
+/* Login Button CSS */
+#login_Button{
+	text-align: center;
+	margin: 100px;
+}
+
+#welcome_Login_Button{
+	height:80px;
+	width:180px;
+	font-size: 2em;
+	border-radius: 10px;
+}
