@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   # route to login page
   get '/user/login' => 'users#login'
 
+  # route to user authentification
+  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
