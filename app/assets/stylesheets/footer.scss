@@ -1,0 +1,51 @@
+// Place all the styles related to the Footer here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 	
+	This File includes all CSS of Footer.
+*/
+
+/* Variablen */
+$footer_height: 60px;
+
+/* Application Footer CSS */
+#application_Footer{
+	width:100%;
+	height:$footer_height;
+	position:fixed;
+	bottom:0px;
+	z-index:10;
+	left:0px;
+	background: #001540;
+	
+	div{
+		float:left;
+		color:#fff;
+	}
+}
+
+#application_Footer div:last-child p,img{
+	margin-right: 5px;
+	margin-top: 5px;
+	float:right;
+}
+
+#application_Footer div:last-child p{
+	margin-right: 15px;
+	margin-top: 20px;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.fix_footer_size_30{
+	width:30%;
+	height:$footer_height;
+}
+
+.fix_footer_size_40{
+	width:40%;
+	height:$footer_height;
+}
+/* END - Application Footer CSS */

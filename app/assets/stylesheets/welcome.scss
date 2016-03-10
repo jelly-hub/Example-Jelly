@@ -6,13 +6,10 @@
 	This File includes all CSS of the landing/welcome page.
 */
 
-/* Variablen */
-$footer_height: 60px;
 
-
-/* body of welcome page */
+/* Welcome Page Body */
 #welcome_Body{
-	background-color: #002140;	
+	background-color: #002140;
 }
 /* END - Body CSS*/
 
@@ -50,45 +47,3 @@ $footer_height: 60px;
 	border-radius: 10px;
 }
 /* END - Login Button CSS */
-
-
-
-/* Welcome Footer CSS */
-#welcome_Footer{
-	width:100%;
-	height:$footer_height;
-	position:fixed;
-	bottom:0px;
-	z-index:10;
-	left:0px;
-	background: #000040;
-	
-	div{
-		float:left;
-		color:#fff;
-	}
-}
-
-#welcome_Footer div:last-child p,img{
-	margin-right: 5px;
-	margin-top: 5px;
-	float:right;
-}
-
-#welcome_Footer div:last-child p{
-	margin-right: 15px;
-	margin-top: 20px;
-	font-family: "Helvetica", Arial, sans-serif;
-	font-weight: bold;
-}
-
-.fix_footer_size_30{
-	width:30%;
-	height:$footer_height;
-}
-
-.fix_footer_size_40{
-	width:40%;
-	height:$footer_height;
-}
-/* END - Welcome Footer CSS */
