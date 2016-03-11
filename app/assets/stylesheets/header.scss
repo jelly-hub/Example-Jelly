@@ -1,0 +1,71 @@
+// Place all the styles related to the Header here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 	
+	This File includes all CSS of Header.
+*/
+
+/* Variablen */
+$header_height: 80px;
+
+/* Application Header CSS */
+#application_Header{
+	width:100%;
+	height:$header_height;
+	position:fixed;
+	top:0px;
+	z-index:10;
+	left:0px;
+	background: #001540;
+
+	div{
+		float:left;
+		color: #fff;
+	}
+}
+
+#application_Header div:nth-child(1n+2) p{
+	float:right;
+	margin-top: 30px;
+}
+
+#application_Header div:last-child p{
+	float:right;
+	margin-right: 15px;
+	margin-top: 30px;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+
+	a{
+		color:#fff;
+		text-decoration: none;
+	}
+}
+
+.fix_header_size_10{
+	width:10%;
+	height:$header_height;
+}
+
+.fix_header_size_20{
+	width:20%;
+	height:$header_height;
+}
+
+.fix_header_size_30{
+	width:30%;
+	height:$header_height;
+}
+
+.fix_header_size_40{
+	width:40%;
+	height:$header_height;
+}
+
+.fix_header_size_60{
+	width:60%;
+	height:$header_height;
+}
+/* END - Application Header CSS */
