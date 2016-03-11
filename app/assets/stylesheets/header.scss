@@ -3,31 +3,99 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* 	
-	This File includes all CSS of Header.
+	This File includes all CSS of Application Header.
 */
 
-/* Variablen */
-$header_height: 80px;
+/* CSS Variables */
+@import "utilities/variables";
 
-/* Application Header CSS */
+/* General Rules of the Application */
+@import "utilities/generalRules"; 
+
+
+
+
+/* BEGIN - Form and Position of Header */
 #application_Header{
 	width:100%;
-	height:$header_height;
+	height:$HEADER_HEIGHT;
 	position:fixed;
 	top:0px;
 	z-index:10;
 	left:0px;
-	background: #001540;
+	background:$JELLY_COLOR_6;
 
 	div{
 		float:left;
-		color: #fff;
+		color:#fff;
 	}
 }
 
-#application_Header div:nth-child(1n+2) p{
+.fix_header_size_5{
+	width:5%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_10{
+	width:10%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_20{
+	width:20%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_30{
+	width:30%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_40{
+	width:40%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_50{
+	width:50%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_60{
+	width:60%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_70{
+	width:70%;
+	height:$HEADER_HEIGHT;
+}
+
+.fix_header_size_80{
+	width:80%;
+	height:$HEADER_HEIGHT;
+}
+/* END - Form and Position of Header */
+
+
+
+
+/* BEGIN - Style of Header */
+#application_Header div:first-child h1{
+	margin-left:15px;
+	margin-top: 30px;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 2.5em;
+}
+
+#application_Header div:nth-child(1n+3) p{
 	float:right;
 	margin-top: 30px;
+	margin-right: 10px;
+
+	span{
+		color:#b0c4de;
+	}
 }
 
 #application_Header div:last-child p{
@@ -43,29 +111,21 @@ $header_height: 80px;
 		text-decoration: none;
 	}
 }
+/* END - Style of Header */
 
-.fix_header_size_10{
-	width:10%;
-	height:$header_height;
+
+
+
+/* BEGIN - Style of Navigation */
+.nav_element{
+	color:#fff;
 }
 
-.fix_header_size_20{
-	width:20%;
-	height:$header_height;
+.nav_element_link{
+	margin-top:40px;
+	color:#fff;
+	text-decoration:none;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 1.5em;
 }
-
-.fix_header_size_30{
-	width:30%;
-	height:$header_height;
-}
-
-.fix_header_size_40{
-	width:40%;
-	height:$header_height;
-}
-
-.fix_header_size_60{
-	width:60%;
-	height:$header_height;
-}
-/* END - Application Header CSS */
+/* END - Style of Navigation */

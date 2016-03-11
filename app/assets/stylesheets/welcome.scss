@@ -6,10 +6,18 @@
 	This File includes all CSS of the landing/welcome page.
 */
 
+/* CSS Variables */
+@import "utilities/variables";
+
+/* General Rules of the Application */
+@import "utilities/generalRules"; 
+
+
+
 
 /* Welcome Page Body */
 #welcome_Body{
-	background-color: #002140;
+	background-color: $JELLY_COLOR_5;
 }
 /* END - Body CSS*/
 

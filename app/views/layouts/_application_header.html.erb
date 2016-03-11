@@ -1,10 +1,27 @@
 <header id="application_Header">
-	<div class="fix_header_size_60">
+<!--must be 100-->
+	<div class="fix_header_size_20">
+		<h1>Example Jelly</h1>
+	</div>
+	<div class="fix_header_size_5 nav_element">
+		<%= link_to "home", user_path, class: "nav_element_link" %>
+	</div>
+	<div class="fix_header_size_5 nav_element">
+		<%= link_to "location", user_path, class: "nav_element_link" %>
+	</div>
+	<div class="fix_header_size_5 nav_element">
+		<%= link_to "food", user_path, class: "nav_element_link" %>
+	</div>
+	<div class="fix_header_size_5 nav_element">
+	</div>
+	<div class="fix_header_size_5 nav_element">
 	</div>
 	<div class="fix_header_size_30">
-		<p>Logged in as: <%= @user.e_mail %>
 	</div>
-	<div class="fix_header_size_10">
+	<div class="fix_header_size_20">
+		<p><%= @user.name %><span> logged in as </span><%= @user.role %></p>
+	</div>
+	<div class="fix_header_size_5">
 		<p><%= link_to "Log out", logout_path %></p>
 	</div>
 </header>

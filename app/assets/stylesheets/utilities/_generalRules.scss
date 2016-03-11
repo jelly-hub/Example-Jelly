@@ -1,11 +1,10 @@
-// Place all the styles here which do not fir anywhere else.
+// Place all the styles here which do not fit anywhere else.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* 	
 	This File includes multipurpose CSS
 */
-
 
 
 /* General body dimensions */
@@ -22,6 +21,8 @@ body{
 .content{
 	margin-top:80px;
 	width: 100vw;
+	height: 90vh;
 	margin-left: 0;
 	margin-right: 0;
+	background: #00CAEE;
 }

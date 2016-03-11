@@ -1,23 +1,7 @@
 <% @title=@user.e_mail %>
-<div class="content">
+<div id="user_content_container" class="content">
 	<p id="notice"><%= notice %></p>
 
-	<p>
-  		<strong>E mail:</strong>
-  		<%= @user.e_mail %>
-	</p>
-
-	<p>
-  		<strong>Password:</strong>
-  		<%= @user.password %>
-	</p>
-
-	<p>
-		<strong>User:</strong>
-		<%= @current_user %>
-	</p>
-
-	<%= link_to 'Edit', edit_user_path(@user) %> |
-	<%= link_to 'Back', users_path %>
+	<p>User Content</p>
 </div>
 

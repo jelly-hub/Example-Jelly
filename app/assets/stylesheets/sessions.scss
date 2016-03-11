@@ -6,11 +6,17 @@
 	This File includes all CSS of the landing/welcome page.
 */
 
+/* CSS Variables */
+@import "utilities/variables";
+
+/* General Rules of the Application */
+@import "utilities/generalRules"; 
+
 
 
 /* Body of login page */
 #login_Body{
-	background-color: #4169e1;
+	background-color:$JELLY_COLOR_4;
 }
 /* END - Login Body CSS */
 
