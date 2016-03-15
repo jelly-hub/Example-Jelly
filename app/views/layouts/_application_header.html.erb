@@ -3,25 +3,19 @@
 	<div class="fix_header_size_20">
 		<h1>Example Jelly</h1>
 	</div>
-	<div class="fix_header_size_5 nav_element">
-		<%= link_to "home", user_path, class: "nav_element_link" %>
-	</div>
-	<div class="fix_header_size_5 nav_element">
-		<%= link_to "location", user_path, class: "nav_element_link" %>
-	</div>
-	<div class="fix_header_size_5 nav_element">
-		<%= link_to "food", user_path, class: "nav_element_link" %>
-	</div>
-	<div class="fix_header_size_5 nav_element">
-	</div>
-	<div class="fix_header_size_5 nav_element">
-	</div>
-	<div class="fix_header_size_30">
+	<div id="app_navigation" class="fix_header_size_50">
+		<ul>
+			<li><%= link_to "home", user_path %></li>
+			<li><%= link_to "location", user_path %></li>
+			<li><%= link_to "food", user_path %></li>
+			<li><%= link_to "users", user_path %></li>
+			<li><%= link_to "config", user_path %></li>
+		</ul>
 	</div>
 	<div class="fix_header_size_20">
-		<p><%= @user.name %><span> logged in as </span><%= @user.role %></p>
+		<p><%= @user.name.downcase %><span> logged in as </span><%= @user.role.downcase %></p>
 	</div>
-	<div class="fix_header_size_5">
-		<p><%= link_to "Log out", logout_path %></p>
+	<div class="fix_header_size_10">
+		<p><%= link_to "log out", logout_path %></p>
 	</div>
 </header>

@@ -80,52 +80,65 @@
 
 
 
-/* BEGIN - Style of Header */
-#application_Header div:first-child h1{
+/* BEGIN - Style of Header and Navigation */
+#application_Header h1{
 	margin-left:15px;
 	margin-top: 30px;
 	font-family: "Helvetica", Arial, sans-serif;
 	font-size: 2.5em;
 }
 
-#application_Header div:nth-child(1n+3) p{
+#app_navigation{
+	ul{
+		padding:0;
+	}
+
+
+	li{
+		float:left;
+		margin-right: 17px;
+		margin-top: 17px;
+		list-style: none;
+	}
+
+	li:first-child{
+		margin-left: 17px;
+	}
+
+	a{
+		color:#ffffff;
+		text-decoration:none;
+		font-family: "Helvetica", Arial, sans-serif;
+		font-size: 1.2em;
+	}
+
+	a:hover{
+		color:$JELLY_COLOR_1;
+		background: $JELLY_COLOR_6;
+	}
+}
+
+#application_Header div p{
 	float:right;
+	margin-right: 15px;
 	margin-top: 30px;
-	margin-right: 10px;
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+
+	a{
+		font-weight: bold;
+		color:#fff;
+		text-decoration: none;
+	}
+
+	a:hover{
+		color:$JELLY_COLOR_1;
+		background: $JELLY_COLOR_6;
+	}
 
 	span{
 		color:#b0c4de;
 	}
 }
-
-#application_Header div:last-child p{
-	float:right;
-	margin-right: 15px;
-	margin-top: 30px;
-	font-family: "Helvetica", Arial, sans-serif;
-	font-size: 1.5em;
-	font-weight: bold;
-
-	a{
-		color:#fff;
-		text-decoration: none;
-	}
-}
-/* END - Style of Header */
-
-
-
-
-/* BEGIN - Style of Navigation */
-.nav_element{
-	color:#fff;
-}
-
-.nav_element_link{
-	margin-top:40px;
-	color:#fff;
-	text-decoration:none;
-	font-family: "Helvetica", Arial, sans-serif;
-	font-size: 1.5em;
-}
-/* END - Style of Navigation */
+/* END - Style of Header and Navigation */
