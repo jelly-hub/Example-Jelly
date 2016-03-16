@@ -1,4 +1,4 @@
-ls// Place all the styles related to the Sessions controller here.
+// Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -16,6 +16,11 @@ ls// Place all the styles related to the Sessions controller here.
 
 /* Body of login page */
 #login_Body{
+	position:relative;
+	padding:0px;
+	margin:0px;
+	top:-22px;
+	min-height: 96vh;
 	background-color:$JELLY_COLOR_4;
 }
 /* END - Login Body CSS */

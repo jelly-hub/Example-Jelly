@@ -1,8 +1,8 @@
 class SessionsController < ApplicationController
+  
   # GET session => '/login'
   # Load Login Page
   def new
-    render :layout => 'welcome'
   end
 
   # POST session => '/login'
@@ -10,18 +10,20 @@ class SessionsController < ApplicationController
   def create
   	user = User.find_by(e_mail: params[:session][:email].downcase)
   	if user && user.authenticate(params[:session][:password])
-  		# Login successful, redirect to user page
+  		# Login successful, save user_id to session and redirect to user page
   		log_in user
-  		redirect_to user
+  		redirect_to user_path(user)
   	else
   		# Login unsuccessful, redirect to Log In Page and display an error message
   		flash.now[:danger] = 'Invalid email/password combination'
-  		render 'new'
+      render "new"
   	end
   end
 
   # DELETE session => '/logout'
   # Quit the Session of a User who has logged out
   def destroy
+    log_out
+    redirect_to root_path
   end
 end
