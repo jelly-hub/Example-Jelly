@@ -1,10 +1,9 @@
-<% @title="Log In" %>
 <div id="login_Body">
 	<%= render 'layouts/error_messages' %>
 	<div id="login_Headline">
 		<h2>Benutzer authentifizierung</h2>
 		<h3>hint: sebastianmandt.dev@gmail.com - jellyadmin</h3>
-		<h3>hint: jellybean@gmail.com - jellyuser</h3>
+		<h3>hint: jellybelly@gmail.com - jellybelly</h3>
 	</div>
 	<div id="login_Form">
 		<%= form_for(:session, url: login_path) do |f| %>
@@ -16,6 +15,9 @@
 		
 			<%= f.submit "Log In Now!", class: "btn btn-primary" %>
 		<% end %>
+	</div>
+	<div id="sign_up">
+		<p>Haven't registered yet? <%= link_to " Sign up ", new_user_path  %> now!</p>
 	</div>
 </div>
 

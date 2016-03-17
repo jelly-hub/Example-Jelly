@@ -1,0 +1,17 @@
+<% @title="home" %>
+<div id="home_content_container" class="content">
+	<p id="notice"><%= notice %></p>
+
+	<div id="latest_talk">
+	
+	</div>
+	<div id="latest_Food_and_Locations">
+		<div id="latest_Food_Posts">
+			<%= render 'foods/index' %>
+		</div>
+		<div id="latest_Location_Posts">
+			<%= render 'locations/index' %>
+		</div>
+	</div>
+</div>
+

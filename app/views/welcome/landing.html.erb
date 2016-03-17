@@ -4,6 +4,10 @@
 		<h1>Example Jelly</h1>
 	</div>
 	<div id="login_Button">
-		<%= button_to "LOGIN", login_path, :id => "welcome_Login_Button", :method => :get %>
+		<% if logged_in? %>
+			<%= button_to "LOGIN", user_path(current_user), :id => "welcome_Login_Button", :method => :get %>
+		<% else %>
+			<%= button_to "LOGIN", login_path, :id => "welcome_Login_Button", :method => :get %>
+		<% end %>	
 	</div>
 

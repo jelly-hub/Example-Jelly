@@ -6,6 +6,10 @@
 	This File includes multipurpose CSS
 */
 
+/* CSS Variables */
+@import "utilities/variables";
+
+
 
 /* General body dimensions */
 body{
@@ -19,8 +23,16 @@ body{
 .content{
 	margin-top:80px;
 	width: 100vw;
-	min-height: 90vh;
+
+	@media screen and (min-height:600px){
+		min-height: 88.1vh;
+	}
+	@media screen and (min-height:800px){
+		min-height: 91.6vh;
+	}
+
+	min-height: 85vh;
 	margin-left: 0;
 	margin-right: 0;
-	background: #00CAEE;
+	background: linear-gradient($JELLY_COLOR_1, $JELLY_COLOR_6);
 }

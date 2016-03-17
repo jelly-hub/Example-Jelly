@@ -8,11 +8,11 @@ class SessionsController < ApplicationController
   # POST session => '/login'
   # Authenticate and create a session for, a User
   def create
-  	user = User.find_by(e_mail: params[:session][:email].downcase)
-  	if user && user.authenticate(params[:session][:password])
+  	@user = User.find_by(e_mail: params[:session][:email].downcase)
+  	if @user && @user.authenticate(params[:session][:password])
   		# Login successful, save user_id to session and redirect to user page
-  		log_in user
-  		redirect_to user_path(user)
+  		log_in @user
+  		redirect_to home_path
   	else
   		# Login unsuccessful, redirect to Log In Page and display an error message
   		flash.now[:danger] = 'Invalid email/password combination'

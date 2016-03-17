@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :comments
+  resources :foods
+  resources :locations
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -7,6 +10,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root is landing Page
   root 'welcome#landing'
+
+  # route to the home screen
+  get '/home' => 'home#show'
 
   # routes for user authentification and session control
   get '/login' => 'sessions#new'

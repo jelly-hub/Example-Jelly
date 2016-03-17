@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  include ApplicationHelper
+
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # With this the link to the login page works. Without, an CSRF Error occured.
@@ -14,6 +16,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    @foods = Food.all
+    @locations = Location.all
   end
 
   # GET /users/new
@@ -31,14 +35,21 @@ class UsersController < ApplicationController
   # => create users with >> password_digest: BCrypt::Password.create("...")  <<
   # => ganz wichtig ... ansonsten suchst du den Fehler wieder ewig Ò.ó
   def create
+    # create User with user input from the sign up page
     @user = User.new(user_params)
 
+    # Users which sign up via the Sign Up form have the role "User" by default.
+    # => Other Admins have to be created by the Masteradmin
+    @user.role = "User"
+
+    # if Saving is successful log the user in and redirect to the user page
     respond_to do |format|
       if @user.save
+        log_in @user
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
-        format.html { render :new }
+        format.html { render :new, notice: 'Email already exists.' }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -76,6 +87,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:e_mail, :password)
+      params.require(:user).permit(:e_mail, :password, :name)
     end
 end

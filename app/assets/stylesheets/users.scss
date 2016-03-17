@@ -5,6 +5,52 @@
 
 /* This File contains all CSS for User related Pages */
 
+/* CSS Variables */
+@import "utilities/variables";
+
+/* General Rules of the Application */
+@import "utilities/generalRules"; 
 
 
-/* User Content Container CSS */
+
+
+/* START - User Sign Up */
+.field_with_errors{
+	text-align:center;
+}
+
+#sign_up_Form{
+	margin-top:0;
+	padding-top:60px;
+	width:100vw;
+	min-height:90vh;
+	background:$JELLY_COLOR_4;
+	color:#ffffff;
+	text-align:center;
+	font-size:1.2em;
+	font-family: "Helvetica", Arial, sans-serif;
+
+	h1{
+		margin-top:50px;
+	}
+
+	a{
+		font-weight:bold;
+		color:#ffffff;
+		text-decoration:none;
+	}
+
+	a:hover{
+		color:$JELLY_COLOR_1;
+		background:$JELLY_COLOR_4;
+	}
+}
+
+#sign_up_Submit{
+	margin-top: 20px;
+	height:40px;
+}
+/* END - User Sign Up */
+
+
+

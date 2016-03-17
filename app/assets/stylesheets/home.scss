@@ -1,0 +1,86 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* This File contains all CSS for the Home Pages */
+
+/* CSS Variables */
+@import "utilities/variables";
+
+/* General Rules of the Application */
+@import "utilities/generalRules"; 
+
+
+
+div{
+	float:left;
+}
+
+/* START - Latest Comments Box CSS */
+#latest_talk{
+
+	@media screen and (min-height:600px){
+		height: 60.5vh;
+	}
+	@media screen and (min-height:800px){
+		height: 72vh;
+	}
+
+	position: relative;
+	width:45%;
+	margin-left: 30px;
+	margin-top: 30px;
+	padding: 20px;
+	border-radius: 20px;
+	background: #ffffff;
+}
+/* END - Latest Comments Box CSS */
+
+
+
+/* START - Latest Posts Boxes CSS */
+#latest_Food_Posts, #latest_Location_Posts{
+	position: relative;
+	width: 70%;
+	
+	@media screen and (min-height:600px){
+		height: 25vh;
+	}
+	@media screen and (min-height:800px){
+		height: 32.3vh;
+	}
+
+	margin-left: 30px;
+	margin-top: 30px;
+	padding: 20px;
+	border-radius: 20px;
+	background: #ffffff;
+
+	a{
+		text-decoration: none;
+	}
+
+	a:hover{
+		background:#ffffff;
+		color:#000000;
+	}
+
+	hr:first-of-type{
+		display:none;
+	}
+}
+
+#latest_Food_Posts{
+}
+/* END - Latest Posts Boxes CSS */
+
+
+
+
+
+.smaller_poster{
+	font-size: 0.8em;
+	color:$JELLY_COLOR_4;
+}

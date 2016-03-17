@@ -1,0 +1,13 @@
+<table>
+  <tbody>
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= link_to food.name, food_path(food) %></td>
+      </tr>  
+      <tr>
+        <td class="smaller_poster"> posted by: <%=link_to food.user.name, user_path(food.user) %></td>
+      </tr>
+      <hr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+<table>
+  <tbody>
+    <% @locations.each do |location| %>
+      <tr>
+        <td><%= link_to location.name, location_path(location) %></td>
+      </tr>
+      <tr>  
+        <td class="smaller_poster"> posted by: <%=link_to location.user.name, user_path(location.user) %></td>
+      </tr>
+      <hr>
+    <% end %>
+  </tbody>
+</table>
